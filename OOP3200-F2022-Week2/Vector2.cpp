@@ -49,15 +49,22 @@ Vector2 Vector2::operator*(const Vector2& rhs) const
 	return temp;
 }
 
-// Hints for the first one
 Vector2 Vector2::operator*(const float scaler) const
 {
+	// C = A * 3
+	Vector2 temp;
+	temp.Set(GetX() * scaler, GetY() * scaler);
+	return temp;
 }
 
-// Hints for the second one
 Vector2 operator*(const float scaler, const Vector2& rhs)
 {
+	// C = 3 * A
+	Vector2 temp;
+	temp.Set(rhs.m_x * scaler, rhs.m_y * scaler);
+	return temp;
 }
+
 
 std::string Vector2::to_string() const
 {
@@ -102,6 +109,7 @@ float Vector2::Distance(const Vector2& vectorA, const Vector2& vectorB)
 	// return the result of the pythagorean formula
 	return sqrt((deltaX * deltaX) + (deltaY * deltaY));
 }
+
 
 
 

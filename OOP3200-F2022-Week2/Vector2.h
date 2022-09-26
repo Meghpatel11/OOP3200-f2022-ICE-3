@@ -25,8 +25,8 @@ public:
 
 	// For you to do
 	Vector2 operator*(const Vector2& rhs) const; // scaling each component
-	// return a vector2 -> takes a float as a parameter on the rhs (e.g. Vec2 * float)
-	// return a vector2 -> takes a float on the lhs and a vector2 on the rhs (float * Vec2) hint: use the friend modifier
+	Vector2 operator*(float scaler) const;
+	friend Vector2 operator*(float scaler, const Vector2& rhs);
 
 	friend std::ostream& operator<<(std::ostream& out, const Vector2& rhs);
 	friend std::istream& operator>>(std::istream& in, Vector2& rhs);
