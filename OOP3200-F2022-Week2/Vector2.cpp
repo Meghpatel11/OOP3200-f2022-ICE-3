@@ -49,19 +49,19 @@ Vector2 Vector2::operator*(const Vector2& rhs) const
 	return temp;
 }
 
-Vector2 Vector2::operator*(const float scaler) const
+Vector2 Vector2::operator*(const float scalar) const
 {
 	// C = A * 3
 	Vector2 temp;
-	temp.Set(GetX() * scaler, GetY() * scaler);
+	temp.Set(GetX() * scalar, GetY() * scalar);
 	return temp;
 }
 
-Vector2 operator*(const float scaler, const Vector2& rhs)
+Vector2 operator*(const float scalar, const Vector2& rhs)
 {
 	// C = 3 * A
 	Vector2 temp;
-	temp.Set(rhs.m_x * scaler, rhs.m_y * scaler);
+	temp.Set(rhs.m_x * scalar, rhs.m_y * scalar);
 	return temp;
 }
 

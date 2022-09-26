@@ -25,8 +25,8 @@ public:
 
 	// For you to do
 	Vector2 operator*(const Vector2& rhs) const; // scaling each component
-	Vector2 operator*(float scaler) const;
-	friend Vector2 operator*(float scaler, const Vector2& rhs);
+	Vector2 operator*(float scalar) const;
+	friend Vector2 operator*(float scalar, const Vector2& rhs);
 
 	friend std::ostream& operator<<(std::ostream& out, const Vector2& rhs);
 	friend std::istream& operator>>(std::istream& in, Vector2& rhs);
@@ -47,7 +47,7 @@ public:
 	// Public static methods
 	static float Distance(const Vector2& vectorA, const Vector2& vectorB);
 
-private:
+protected:
 	// INSTANCE VARIABLES (Class Member Variables)
 	float m_x{};
 	float m_y{};
