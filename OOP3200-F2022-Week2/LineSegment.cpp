@@ -6,12 +6,17 @@
 
 LineSegment::LineSegment()
 {
-	Set(Vector2::Zero(), Vector2::Zero());
+	Set("Line Segment", Vector2::Zero(), Vector2::Zero());
 }
 
 LineSegment::LineSegment(const Vector2& start, const Vector2& end)
 {
-	Set(start, end);
+	Set("Line Segment", start, end);
+}
+
+LineSegment::LineSegment(const std::string& name, const Vector2& start, const Vector2& end)
+{
+	Set(name, start, end);
 }
 
 LineSegment::~LineSegment()
@@ -37,10 +42,27 @@ void LineSegment::SetEnd(const Vector2& end)
 	m_end = end;
 }
 
+std::string LineSegment::GetName()
+{
+	return m_name;
+}
+
+void LineSegment::SetName(const std::string& name)
+{
+	m_name = name;
+}
+
 void LineSegment::Set(const Vector2& start, const Vector2& end)
 {
 	SetStart(start);
 	SetEnd(end);
+}
+
+void LineSegment::Set(const std::string& name, const Vector2& start, const Vector2& end)
+{
+	SetStart(start);
+	SetEnd(end);
+	SetName(name);
 }
 
 float LineSegment::GetLength()
@@ -51,7 +73,11 @@ float LineSegment::GetLength()
 std::string LineSegment::to_string()
 {
 	std::stringstream stream;
-	stream << std::fixed << std::setprecision(2) << "Start: (" << GetStart().GetX() << ", " << GetStart().GetY() << ")\n";
-	stream << std::fixed << std::setprecision(2) << "End  : (" << GetEnd().GetX() << ", " << GetEnd().GetY() << ")" << std::endl;
+	stream << "Name: " << GetName() << std::endl;
+	stream << "------------------------------\n";
+	stream << std::fixed << std::setprecision(2) << "Start : (" << GetStart().GetX() << ", " << GetStart().GetY() << ")\n";
+	stream << std::fixed << std::setprecision(2) << "End   : (" << GetEnd().GetX() << ", " << GetEnd().GetY() << ")\n";
+	stream << "------------------------------\n";
+	stream << "Length: " << std::fixed << std::setprecision(2) << GetLength() << std::endl;
 	return stream.str();
 }
