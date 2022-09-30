@@ -4,14 +4,32 @@
 #include <iomanip>
 #include <iostream>
 
+// empty / default constructor
 Vector3::Vector3()
 {
 	Set(0.0f, 0.0f, 0.0f);
 }
 
+// copy constructor
+Vector3::Vector3(const Vector3& otherVector3)
+{
+	Set(otherVector3.GetX(), otherVector3.GetY(), otherVector3.GetZ());
+}
+
+
+// parameterized constructor
 Vector3::Vector3(const float x, const float y, const float z)
 {
 	Set(x, y, z);
+}
+
+// move constructor
+Vector3::Vector3(Vector3&& otherVector3) noexcept
+{
+	// first copy
+	Set(otherVector3.GetX(), otherVector3.GetY(), otherVector3.GetZ());
+	// then destroy the original
+	otherVector3.Set(0.0f, 0.0f, 0.0f);
 }
 
 Vector3::~Vector3()

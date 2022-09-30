@@ -13,11 +13,14 @@ public:
 	// default constructor
 	Vector3();
 
+	// copy constructor
+	Vector3(const Vector3& otherVector3);
+
 	// parameterized constructor
 	Vector3(float x, float y, float z);
 
-	// copy constructor (you to do)
 	// move constructor (you to do)
+	Vector3(Vector3&& otherVector3) noexcept;
 
 	// destructor
 	~Vector3();
