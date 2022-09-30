@@ -1,13 +1,24 @@
 #include <iostream>
 
-#include "LineSegment.h"
+#include "Vector2.h"
+#include <vector>
 
 int main()
 {
-    LineSegment segment = LineSegment();
-    segment.Set("Line Segment A", Vector2(2.0f, 2.0f), Vector2(4.0f, 4.0f));
+    // replace the following code (which is a sample) with 3 LineSegment objects instead
 
-    std::cout << segment.to_string() << std::endl;
+    std::vector<Vector2*> vector2s;
+
+    for (int i = 0; i < 5; ++i)
+    {
+        vector2s.push_back(new Vector2(static_cast<float>(i), static_cast<float>(i)));
+    }
+
+    // ranged for loop
+    for (const auto& vector2 : vector2s)
+    {
+        std::cout << vector2->to_string() << std::endl;
+    }
 
 }
 
