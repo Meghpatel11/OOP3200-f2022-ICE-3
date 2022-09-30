@@ -22,6 +22,9 @@
     <ClCompile Include="Vector3.cpp">
       <Filter>objects</Filter>
     </ClCompile>
+    <ClCompile Include="LineSegment.cpp">
+      <Filter>objects</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Person.h">
@@ -31,6 +34,9 @@
       <Filter>objects</Filter>
     </ClInclude>
     <ClInclude Include="Vector3.h">
+      <Filter>objects</Filter>
+    </ClInclude>
+    <ClInclude Include="LineSegment.h">
       <Filter>objects</Filter>
     </ClInclude>
   </ItemGroup>

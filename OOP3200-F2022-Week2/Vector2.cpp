@@ -110,7 +110,10 @@ float Vector2::Distance(const Vector2& vectorA, const Vector2& vectorB)
 	return sqrt((deltaX * deltaX) + (deltaY * deltaY));
 }
 
-
+Vector2 Vector2::Zero()
+{
+	return {0.0f, 0.0f};
+}
 
 
 std::ostream& operator<<(std::ostream& out, const Vector2& rhs)
