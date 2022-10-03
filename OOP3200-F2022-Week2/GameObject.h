@@ -23,7 +23,6 @@ public:
 
 	// life-cycle functions
 	virtual void Update();
-	virtual void Draw();
 
 	// utility functions
 	virtual std::string to_string();

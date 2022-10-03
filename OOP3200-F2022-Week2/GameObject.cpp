@@ -37,9 +37,6 @@ void GameObject::Update()
 {
 }
 
-void GameObject::Draw()
-{
-}
 
 std::string GameObject::to_string()
 {
