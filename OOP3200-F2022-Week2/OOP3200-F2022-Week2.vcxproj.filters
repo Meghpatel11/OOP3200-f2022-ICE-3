@@ -25,6 +25,9 @@
     <ClCompile Include="LineSegment.cpp">
       <Filter>objects</Filter>
     </ClCompile>
+    <ClCompile Include="Mathf.cpp">
+      <Filter>core</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Person.h">
@@ -38,6 +41,9 @@
     </ClInclude>
     <ClInclude Include="LineSegment.h">
       <Filter>objects</Filter>
+    </ClInclude>
+    <ClInclude Include="Mathf.h">
+      <Filter>core</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
