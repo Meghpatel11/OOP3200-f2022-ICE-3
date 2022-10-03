@@ -28,6 +28,9 @@
     <ClCompile Include="Mathf.cpp">
       <Filter>core</Filter>
     </ClCompile>
+    <ClCompile Include="Transform.cpp">
+      <Filter>objects</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Person.h">
@@ -44,6 +47,9 @@
     </ClInclude>
     <ClInclude Include="Mathf.h">
       <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="Transform.h">
+      <Filter>objects</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

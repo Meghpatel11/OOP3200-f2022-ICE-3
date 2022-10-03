@@ -47,6 +47,11 @@ public:
 	// Public static methods
 	static float Distance(const Vector2& vectorA, const Vector2& vectorB);
 	static Vector2 Zero();
+	static Vector2 One();
+	static Vector2 Right();
+	static Vector2 Left();
+	static Vector2 Up();
+	static Vector2 Down();
 
 protected:
 	// INSTANCE VARIABLES (Class Member Variables)
