@@ -115,6 +115,31 @@ Vector2 Vector2::Zero()
 	return {0.0f, 0.0f};
 }
 
+Vector2 Vector2::One()
+{
+	return { 1.0f, 1.0f };
+}
+
+Vector2 Vector2::Right()
+{
+	return { 1.0f, 0.0f };
+}
+
+Vector2 Vector2::Left()
+{
+	return { -1.0f, 0.0f };
+}
+
+Vector2 Vector2::Up()
+{
+	return { 0.0f, -1.0f };
+}
+
+Vector2 Vector2::Down()
+{
+	return { 0.0f, 1.0f };
+}
+
 
 std::ostream& operator<<(std::ostream& out, const Vector2& rhs)
 {
