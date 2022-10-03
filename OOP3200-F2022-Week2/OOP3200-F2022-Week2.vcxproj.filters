@@ -31,6 +31,9 @@
     <ClCompile Include="Transform.cpp">
       <Filter>objects</Filter>
     </ClCompile>
+    <ClCompile Include="GameObject.cpp">
+      <Filter>objects</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Person.h">
@@ -49,6 +52,9 @@
       <Filter>core</Filter>
     </ClInclude>
     <ClInclude Include="Transform.h">
+      <Filter>objects</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObject.h">
       <Filter>objects</Filter>
     </ClInclude>
   </ItemGroup>
