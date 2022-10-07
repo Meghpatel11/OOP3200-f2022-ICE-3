@@ -21,7 +21,7 @@ public:
 
 	// Getters and Setters
 	std::string GetName();
-	void SetName(std::string& name);
+	void SetName(const std::string& name);
 
 	// Public Utility Functions
 	void AddChild(DisplayObject* child);

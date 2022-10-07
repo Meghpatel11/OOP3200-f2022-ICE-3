@@ -1,6 +1,9 @@
 #include "DisplayObject.h"
 #include "Scene.h"
 
+#include <sstream>
+#include <iomanip>
+
 DisplayObject::DisplayObject(const std::string& name): GameObject(name)
 {
 	SetParent(nullptr);
@@ -21,7 +24,7 @@ void DisplayObject::SetParent(Scene* scene)
 
 void DisplayObject::Update()
 {
-	GameObject::Update();
+	
 }
 
 void DisplayObject::Draw()
@@ -30,6 +33,17 @@ void DisplayObject::Draw()
 
 std::string DisplayObject::to_string()
 {
-	// TODO: need to work on this
-	return GameObject::to_string();
+	std::stringstream stream;
+	stream << "Display Object Name : " << GetName() << std::endl;
+	stream << "Transform           : " << std::endl;
+	stream << "---------------------------" << std::endl;
+	stream << GetTransform()->to_string();
+	stream << "---------------------------" << std::endl;
+	if(GetParent() != nullptr)
+	{
+		stream << "Parent Scene: " << GetParent()->GetName();
+		stream << "---------------------------" << std::endl;
+	}
+	
+	return stream.str();
 }
