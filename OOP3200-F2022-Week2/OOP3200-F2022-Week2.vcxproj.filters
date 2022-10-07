@@ -38,7 +38,7 @@
       <Filter>objects</Filter>
     </ClCompile>
     <ClCompile Include="Scene.cpp">
-      <Filter>core</Filter>
+      <Filter>objects</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -66,6 +66,8 @@
     <ClInclude Include="DisplayObject.h">
       <Filter>objects</Filter>
     </ClInclude>
-    <ClInclude Include="Scene.h" />
+    <ClInclude Include="Scene.h">
+      <Filter>objects</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
