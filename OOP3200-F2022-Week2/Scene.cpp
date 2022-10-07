@@ -3,7 +3,7 @@
 #include <sstream>
 #include <iomanip>
 
-Scene::Scene(std::string& name)
+Scene::Scene(const std::string& name)
 {
 	SetName(name);
 }
@@ -62,10 +62,10 @@ std::string Scene::to_string()
 
 	for (const auto display_object : m_pDisplayList)
 	{
-		stream << display_object->to_string();
+		stream << "\n---------------------------" << std::endl;
+		stream << display_object->to_string() << std::endl;
 	}
 
-	stream << "---------------------------" << std::endl;
 	return stream.str();
 }
 

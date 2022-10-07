@@ -10,7 +10,7 @@ class Scene
 {
 public:
 	// Constructor(s)
-	Scene(std::string& name);
+	Scene(const std::string& name);
 
 	// Destructor
 	~Scene();

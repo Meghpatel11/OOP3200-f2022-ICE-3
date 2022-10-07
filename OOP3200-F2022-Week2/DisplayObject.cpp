@@ -39,11 +39,9 @@ std::string DisplayObject::to_string()
 	stream << "---------------------------" << std::endl;
 	stream << GetTransform()->to_string();
 	stream << "---------------------------" << std::endl;
-	if(GetParent() != nullptr)
-	{
-		stream << "Parent Scene: " << GetParent()->GetName();
-		stream << "---------------------------" << std::endl;
-	}
+	stream << "Parent Scene: ";
+	(GetParent() != nullptr ? stream << GetParent()->GetName() : stream << "NULL") << std::endl;
+	stream << "---------------------------" << std::endl;
 	
 	return stream.str();
 }
